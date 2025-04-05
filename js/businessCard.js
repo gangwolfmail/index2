@@ -487,7 +487,8 @@ function stringLengthControl (triggerLineInCard, triggerInput) {
     }
 }
 function createBusinessCard () {
-    const companyMargin = companyInCard.getBoundingClientRect().height > 14 ? 87.06 : 96.17;
+    const companyMargin = companyInCard.getBoundingClientRect().height > 14 ? 87.06 : 87.06;
+    // 96.17;
     const officeArray = officeInCard.textContent.split(/\u200B\s?(.*)/s);
     const cardFront = document.querySelector(".cardFront");
     let positionMargin = 43.87;
