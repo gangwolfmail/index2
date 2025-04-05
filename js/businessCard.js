@@ -128,7 +128,7 @@ dropdownInFormSelectChoice(buttonsInDropdownsLanguage, dropdownInputLanguage, nu
 //--------------------------------other inputs
 fullnameInput.addEventListener("input", function(e) {
     e.target.value = e.target.value.replace(/[{}\[\]<>&\^;?%]/g, "");
-    changeCardContent(fullnameInput, fullnameInCard, "Повне ім'я", "Full name")
+    changeCardContent(fullnameInput, fullnameInCard, "ІМ'Я та Прізвище", "Full name")
     const paragraphHeight = fullnameInCard.getBoundingClientRect().height;
     fullnameInCard.style.position = paragraphHeight > 27 ? "relative" : "absolute";
     positionInCard.style.marginTop = paragraphHeight > 27 ? "4px" : "65px";
@@ -376,7 +376,7 @@ function loadConnections(assetsList, webPagesOfAssetsList) {
     changeCardContent(dropdownInputOrganization, companyInCard, "Підприємство", "Company")
     changeCardContent(dropdownInputOffice, officeInCard, "Адреса підприємства", "Company address")
     changeCardContent(dropdownInputOffice, webPageInCard, "Сайт", "Webpage")
-    changeCardContent(fullnameInput, fullnameInCard, "Повне ім'я", "Full name")
+    changeCardContent(fullnameInput, fullnameInCard, "Ім'я та Прізвище", "Full name")
     changeCardContent(emailInput, emailInCard, "Електронна пошта", "Email")
     changeCardContent(positionInput, positionInCard, "Посада", "Position")
     changeCardContent(additionalInfoInput, additionalInfoInCard, "", "")
@@ -408,7 +408,7 @@ function loadConnections(assetsList, webPagesOfAssetsList) {
             createQrCode()
             changeMainButtonsState()
             const paragraphHeight = companyInCard.getBoundingClientRect().height;
-            companyInCard.style.marginTop = paragraphHeight > 14 ? "129px" : "142.5px";
+            companyInCard.style.marginTop = paragraphHeight > 14 ? "129px" : "129.5px";
             for (let j = 0; j < buttonsInDropdownsOffice.length; j++) {
                 buttonsInDropdownsOffice[j].addEventListener("click", () => {
                     let officeArray = buttonsInDropdownsOffice[j].textContent.split(/\u200B\s?(.*)/s);
